@@ -1,0 +1,271 @@
+:root {
+  --color-primary: #ad949b;
+  --color-secondary: #563738;
+  --color-tertiary: #a06e53;
+  --color-quaternary: #cc784b;
+  --color-quinary: #eeb57b;
+  --color-grey-light-0: #fffcfc;
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-3: #f0eeee;
+  --color-grey-light-4: #ccc;
+  --color-grey-dark-1: #333;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before *::after {
+  border-style: inherit;
+  font-size: 62.5%; }
+
+html {
+  box-sizing: border-box;
+  overflow: scroll; }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 3rem;
+  color: var(--color-grey-light-1);
+  line-height: 1.6;
+  min-height: 100vh; }
+
+.login {
+  height: 100vh;
+  background-image: url("../asset/yvette-de-wit-118721-unsplash-mobile.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between; }
+  .login__header {
+    font-size: 6rem;
+    line-height: 1.25;
+    margin-left: 3rem;
+    margin-top: 3rem; }
+
+.button {
+  border-radius: 1000rem;
+  border-style: solid;
+  border-width: 0.5rem;
+  background-color: transparent;
+  padding: 3rem;
+  display: flex;
+  color: inherit;
+  align-items: center;
+  font-size: inherit;
+  margin-bottom: 3rem;
+  margin-right: 3rem; }
+
+.button--end {
+  align-self: flex-end; }
+
+.home {
+  height: 100vh;
+  display: flex; }
+
+.menu-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 15rem;
+  background-color: var(--color-quinary); }
+
+.search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  position: relative; }
+  .search__input {
+    width: 70%;
+    font-size: inherit;
+    border-radius: 1rem;
+    color: var(--color-grey-light-1);
+    transition: all 0.3s;
+    padding: 2rem 10%;
+    background-color: var(--color-grey-light-1); }
+    .search__input:focus {
+      width: 70%;
+      color: var(--color-grey-dark-1);
+      outline: none;
+      padding: 2rem 13%; }
+    .search__input::placeholder {
+      color: var(--color-grey-light-4); }
+  .search__input:focus + .search__button {
+    background-color: var(--color-grey-light-3); }
+  .search__button {
+    height: 5rem;
+    width: 5rem;
+    position: absolute;
+    margin-left: -40%;
+    border: none;
+    background-color: transparent; }
+    .search__button:focus {
+      outline: none; }
+    .search__button:active {
+      transform: translateY(0.2rem); }
+
+.link-bar {
+  display: flex;
+  width: 100%; }
+
+.nav-link {
+  text-align: center;
+  width: 100%;
+  font-size: inherit;
+  border-style: none;
+  background-color: transparent;
+  color: inherit; }
+
+.nav-link--active {
+  border-bottom: solid;
+  border-width: 0.5rem;
+  border-color: var(--color-tertiary);
+  outline: none; }
+
+.home-content {
+  margin-top: 15rem;
+  width: 100%;
+  background-color: var(--color-grey-light-2);
+  color: var(--color-grey-dark-1); }
+
+.festival-box {
+  width: 90%;
+  background-color: var(--color-grey-light-1);
+  margin-top: 3rem;
+  border-style: solid;
+  border-color: var(--color-quaternary);
+  border-width: 0.3rem;
+  border-radius: 1rem; }
+  .festival-box__header {
+    margin: 1rem 0.5rem 1rem 1rem;
+    display: flex;
+    justify-content: start;
+    align-items: center; }
+    .festival-box__header__img {
+      height: 100%;
+      border: solid 0.5rem var(--color-grey-light-1); }
+    .festival-box__header__text-box {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      flex-direction: column;
+      margin-left: 1rem;
+      line-height: 3rem; }
+      .festival-box__header__text-box--date {
+        color: var(--color-grey-dark-2);
+        font-size: 2.5rem; }
+
+.carousel {
+  overflow-x: auto; }
+  .carousel__list {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+  .carousel__item {
+    flex-shrink: 0;
+    height: 30rem;
+    width: 30rem;
+    font-weight: 600;
+    color: var(--color-grey-light-1);
+    background-size: cover; }
+
+.artist-info {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center; }
+
+.play-button {
+  background-color: transparent;
+  width: 6rem;
+  height: 6rem;
+  border: solid 0.5rem var(--color-grey-light-1);
+  border-radius: 50%; }
+  .play-button--triangle {
+    margin: auto;
+    height: 0;
+    width: 0;
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 1.5rem 0 1.5rem 3rem;
+    border-color: transparent transparent transparent var(--color-grey-light-1);
+    margin: 0 auto;
+    border-style: solid; }
+
+.info-button {
+  padding: 2rem 0.8rem;
+  line-height: 0;
+  background-color: transparent;
+  border: solid 0.4rem var(--color-grey-light-1);
+  border-radius: 10rem;
+  color: var(--color-grey-light-1);
+  font-size: inherit;
+  margin-bottom: 1rem; }
+
+.festival-box-footer {
+  margin: 1rem; }
+  .festival-box-footer__extra {
+    display: flex;
+    justify-content: space-between; }
+  .festival-box-footer__add {
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-between; }
+
+.btn-ter {
+  padding: 2rem 0.8rem;
+  line-height: 0;
+  background-color: transparent;
+  border: solid 0.3rem var(--color-tertiary);
+  border-radius: 10rem;
+  color: var(--color-tertiary);
+  font-size: inherit; }
+
+.fas {
+  margin-left: 0.4rem;
+  font-size: 2.5rem; }
+
+.festival-list {
+  width: auto;
+  height: auto; }
+
+.festival-item {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; }
+
+.favourites-content {
+  display: flex;
+  justify-content: space-between; }
+
+.delete-fav {
+  padding: 2rem 0.8rem;
+  line-height: 0;
+  border: None;
+  background-color: transparent;
+  color: black;
+  outline: None;
+  font-size: inherit;
+  margin-bottom: 1rem; }
